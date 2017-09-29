@@ -64,7 +64,8 @@ const helpMessage = (message) => {
   text = '*How to use this bot*\n' +
   'To create a list: _@MakeThatBot create #<list name>_\n' +
   'To add a task to a list: _/a #<list name> <task>_\n' +
-  'To mark a task as done: _/d #<list name> <number>_'
+  'To mark a task as done: _/d #<list name> <number>_\n\n' +
+  '*Remember to promote me to admin so I can delete the command messages and reduce spam*'
   bot.sendMessage(message.chat.id, text, { parse_mode: 'Markdown'})
 }
 
