@@ -62,7 +62,7 @@ const updateTaskList = (listObject) => {
 
 const helpMessage = (message) => {
   text = '*How to use this bot*\n' +
-  'To create a list: _@MyTestingPlaygroundBot create #<list name>_\n' +
+  'To create a list: _@MakeThatBot create #<list name>_\n' +
   'To add a task to a list: _/a #<list name> <task>_\n' +
   'To mark a task as done: _/d #<list name> <number>_'
   bot.sendMessage(message.chat.id, text, { parse_mode: 'Markdown'})
@@ -72,8 +72,8 @@ bot.on('text', (message) => {
   if(message.text.startsWith('/help')){
     helpMessage(message)
   }
-  else if(message.text.startsWith('@MyTestingPlaygroundBot create #')){
-    const listName = message.text.split('@MyTestingPlaygroundBot create #').pop()
+  else if(message.text.startsWith('@MakeThatBot create #')){
+    const listName = message.text.split('@MakeThatBot create #').pop()
     
     bot.sendMessage(message.chat.id, `Hey, I will update this message with the tasks for #${listName} list`)
     .then((response) => {
